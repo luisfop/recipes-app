@@ -1,8 +1,9 @@
 import React,{useEffect,useState} from 'react';
 import {getRecipes} from './Services/index';
 
-import './App.css';
 import Recipes from './Components/Recipes/Recipes';
+
+import './App.css';
 
 const App = () => {
 

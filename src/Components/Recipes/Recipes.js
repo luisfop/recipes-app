@@ -2,19 +2,19 @@ import React from 'react';
 
 import Recipe from './Recipe/Recipe';
 
+import './Recipes.css'
+
 
 const Recipes = (props) => {
 
-    
-
-    // console.log('Props.Recipes ->>>>> ',props.recipes)
-        
     const showRecipes = props.loading ? 'Loading...' : props.recipes.map((recipe,i) => {
         return( <Recipe key={i} label={recipe.recipe.label} image={recipe.recipe.image} />)
-    })
+    });
+
+    
 
     return(
-        <div className="">
+        <div className="Recipes">
             {showRecipes} 
         </div>
             
