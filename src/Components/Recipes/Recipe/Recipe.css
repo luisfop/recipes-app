@@ -1,0 +1,12 @@
+.Recipe{
+    margin-right: 20px;
+    box-sizing: border-box;
+    border: 2px solid grey;
+    height: 500px;
+    box-shadow: 0px 1px 5px 1px;
+}
+
+.Recipe:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
