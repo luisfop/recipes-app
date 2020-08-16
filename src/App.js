@@ -2,10 +2,11 @@ import React,{useEffect,useState} from 'react';
 import {getRecipes} from './Services/index';
 
 import './App.css';
+import Recipes from './Components/Recipes/Recipes';
 
 const App = () => {
 
-  const[recipes,setRecipes] = useState([{}]);
+  const[recipes,setRecipes] = useState([]);
   const[loading,setLoading] = useState(true);
 
   const [inputData, setInputData] = useState('');
@@ -23,17 +24,34 @@ const App = () => {
       setRecipes(response.hits);
       setLoading(false)      
     }
-
     fetchData();
-
-
-
-  },[])
+  },[query])
   
+
+  const inputHandler = (event) => {
+    setInputData(event.target.value);
+    console.log('input data ->', inputData);
+  };
+
+  const submitSearch = (event) => {
+    event.preventDefault();
+    setQuery(inputData);
+  }
+
+
 
   return (
     <div className="App">
       <h1>Recipe App</h1>
+
+      <form onSubmit={submitSearch}>
+        <input type="text" onChange={inputHandler}/>
+        <button>Search</button>
+      </form>
+
+    <hr/>
+
+      <Recipes recipes={recipes} loading={loading}/>
 
     </div>
   );
