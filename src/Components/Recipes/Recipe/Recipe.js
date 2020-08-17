@@ -3,22 +3,15 @@ import React from 'react';
 import './Recipe.css';
 
 const Recipe = (props) => {
-
-
-
-
-
-    const ingredients = props.ingredientes.map(ingrediente => {
-        return(<p>{ingrediente.text}</p>)
-    })
     
     return(
         <div className="Recipe">
-            <div className="Card">
+            <div className="Card" onClick={props.clicked} >
                 <label>Name: {props.label}</label> 
             </div>
                 <img src={props.image} />
-                {/* {ingredients} */}
+                <div className="Card__Info">
+                </div>
         </div>
     )
 

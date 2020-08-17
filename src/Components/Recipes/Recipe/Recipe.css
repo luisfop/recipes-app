@@ -11,15 +11,21 @@
     cursor: pointer;
 }
 
-.Recipe .Card {
+.Recipe .Card,
+.Recipe .Card img {
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 10%;
-    
+    width: 80%;
+    height: auto;
 }
 
 .Recipe .Card label{
     color: darkblue;
+}
+
+.Recipe .Card__Info {
+    
 }
 
 
