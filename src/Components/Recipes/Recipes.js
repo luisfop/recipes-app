@@ -7,15 +7,18 @@ import './Recipes.css'
 
 const Recipes = (props) => {
 
+    console.log('RECIPES -> -> ' ,props.recipes)
+    
+
     const showRecipes = props.loading ? 'Loading...' : props.recipes.map((recipe,i) => {
-        return( <Recipe key={i} label={recipe.recipe.label} image={recipe.recipe.image} />)
+        return( <Recipe key={i} label={recipe.recipe.label} image={recipe.recipe.image} ingredientes={recipe.recipe.ingredients} />)
     });
 
     
 
     return(
         <div className="Recipes">
-            {showRecipes} 
+            {showRecipes.slice(0,9)} 
         </div>
             
     )

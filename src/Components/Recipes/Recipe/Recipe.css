@@ -7,6 +7,20 @@
 }
 
 .Recipe:hover{
-    background-color: lightgray;
+    background-color: rgb(216, 209, 209);
     cursor: pointer;
 }
+
+.Recipe .Card {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10%;
+    
+}
+
+.Recipe .Card label{
+    color: darkblue;
+}
+
+
+
