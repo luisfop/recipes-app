@@ -7,6 +7,8 @@ import Recipes from "./Components/Recipes/Recipes";
 
 import "./App.css";
 
+
+
 const App = () => {
   const [recipes, setRecipes] = useState([{}]);
   const [loading, setLoading] = useState(true);
@@ -39,16 +41,24 @@ const App = () => {
     setQuery(inputData);
   };
 
+  const disableButton = () => {
+    return inputData.length < 1;
+  }
+
+
+
   return (
     
       <div className="App">
         <h1>Recipe App</h1>
-
-        <form onSubmit={submitSearch}>
-          <input type="text" onChange={inputHandler} />
-          <button>Search</button>
-        </form>
-        <hr />
+        
+        <div className="Form">
+          <form onSubmit={submitSearch}>
+            <input type="text" onChange={inputHandler} placeholder="Type the recipe that you're looking for..."/>
+            <button disabled={disableButton()}>Search</button>
+          </form>
+        </div>
+        
         
         <Recipes recipes={recipes} loading={loading} />        
       </div>
