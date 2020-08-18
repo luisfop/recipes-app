@@ -2,17 +2,19 @@
     margin-right: 20px;
     box-sizing: border-box;
     border: 2px solid grey;
-    height: 500px;
-    box-shadow: 0px 1px 5px 1px;
+    height: 420px;
+    box-shadow: 0px 5px 0px 3px;
+    border-radius: 10px;
+    width: 380px;
 }
 
+
 .Recipe:hover{
-    background-color: rgb(216, 209, 209);
+    background-color: #f1f1f1;
     cursor: pointer;
 }
 
-.Recipe .Card,
-.Recipe .Card img {
+.Recipe .Card{
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 10%;
@@ -20,13 +22,24 @@
     height: auto;
 }
 
-.Recipe .Card label{
-    color: darkblue;
+.Recipe img {
+    border-radius: 50%;
 }
 
-.Recipe .Card__Info {
-    
+.Recipe .Card label{
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20%;
+    padding-top: 5%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;;
 }
+
 
 
 

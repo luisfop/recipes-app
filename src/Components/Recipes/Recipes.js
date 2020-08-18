@@ -44,7 +44,6 @@ const Recipes = (props) => {
     return(
         <div className="Recipes">
             {showRecipes } 
-
             <Modal show={showModal}modalClosed={closeModal}>
                     {fullRecipe}
             </Modal>
