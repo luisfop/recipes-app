@@ -28,7 +28,7 @@ const Recipes = (props) => {
         setShowModal(false)
     }
     
-    const showRecipes = props.loading ? 'Loading...' : props.recipes.map((recipe,i) => {
+    const recipe = props.recipes.map((recipe,i) => {
         return( 
                     <Recipe 
                         key={i} 
@@ -39,11 +39,11 @@ const Recipes = (props) => {
                 )
     });
 
-    const fullRecipe = props.loading ? 'Loading...' : <FullRecipe title={props.recipes[index].recipe.label} ingredients={props.recipes[index].recipe.ingredients} />
+    const fullRecipe = <FullRecipe title={props.recipes[index].recipe.label} ingredients={props.recipes[index].recipe.ingredients} />
  
     return(
         <div className="Recipes">
-            {showRecipes } 
+            {recipe } 
             <Modal show={showModal}modalClosed={closeModal}>
                     {fullRecipe}
             </Modal>

@@ -40,6 +40,8 @@ const App = () => {
     return inputData.length < 1;
   }
 
+  const allRecipes = loading ? 'Waiting for loading...' :  <Recipes recipes={recipes} /> 
+
   return (    
       <div className="Recipes_App">
         <h1>Recipe App</h1>
@@ -49,7 +51,7 @@ const App = () => {
             <button disabled={disableButton()}>Search</button>
           </form>
         </div>
-        <Recipes recipes={recipes} loading={loading} />        
+          {allRecipes}
       </div>
     
   );
