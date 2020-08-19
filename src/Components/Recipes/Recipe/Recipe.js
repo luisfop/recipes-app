@@ -2,18 +2,16 @@ import React from 'react';
 
 import './Recipe.css';
 
-const Recipe = (props) => {
+const Recipe = ({clicked,label,image}) => {
     
     return(
         <div className="Recipe">
-            <div className="Card" onClick={props.clicked} >
-                <label>{props.label}</label> 
+            <div className="Card" onClick={clicked} >
+                <label>{label}</label> 
             </div>
-                <img src={props.image} onClick={props.clicked} />
+                <img src={image} onClick={clicked} />
         </div>
     )
-
-
     
 }
 

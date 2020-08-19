@@ -1,0 +1,9 @@
+.FullRecipe h1 {
+    display: inline-flex;
+    color: lightgoldenrodyellow;
+}
+
+.FullRecipe li{
+    display: flex;
+}
+

@@ -22,7 +22,7 @@ const App = () => {
     async function fetchData() {
       let response = await getRecipes(url, query);
       setRecipes(response.slice(0,9));
-      setLoading(false);
+        setLoading(false);
     }
     fetchData();
   }, [query]);
@@ -40,7 +40,7 @@ const App = () => {
     return inputData.length < 1;
   }
 
-  const allRecipes = loading ? 'Waiting for loading...' :  <Recipes recipes={recipes} /> 
+  const allRecipes = loading ? 'Waiting for loading...' :  <Recipes recipes={recipes} loading={loading}/> 
 
   return (    
       <div className="Recipes_App">

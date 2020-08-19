@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './FullRecipe.css'
+
 
 const FullRecipe = (props) => {
 
@@ -12,12 +14,13 @@ const FullRecipe = (props) => {
     })
     
     return(
-        <div>
+        <div className="FullRecipe">
             <h1>{props.title}</h1>
             
             { ingredients}
         </div>    
     )
+    
 }
 
 export default FullRecipe;

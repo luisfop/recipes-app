@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState} from 'react';
 
 import Recipe from './Recipe/Recipe';
 
@@ -9,7 +9,7 @@ import './Recipes.css'
 import FullRecipe from '../FullRecipe/FullRecipe';
 
 
-const Recipes = (props) => {
+const Recipes = ({recipes,loading}) => {
 
     const[showModal, setShowModal] = useState(false);
     const[index, setIndex] = useState(0);
@@ -28,7 +28,7 @@ const Recipes = (props) => {
         setShowModal(false)
     }
     
-    const recipe = props.recipes.map((recipe,i) => {
+    const recipe = recipes.map((recipe,i) => {
         return( 
                     <Recipe 
                         key={i} 
@@ -39,13 +39,13 @@ const Recipes = (props) => {
                 )
     });
 
-    const fullRecipe = <FullRecipe title={props.recipes[index].recipe.label} ingredients={props.recipes[index].recipe.ingredients} />
+    const fullRecipe = loading ? 'Something went wrong' : <FullRecipe title={recipes[index].recipe.label} ingredients={recipes[index].recipe.ingredients} />
  
     return(
         <div className="Recipes">
             {recipe } 
             <Modal show={showModal}modalClosed={closeModal}>
-                    {fullRecipe}
+                {fullRecipe}
             </Modal>
         </div>
             

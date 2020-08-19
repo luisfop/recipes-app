@@ -1,3 +1,7 @@
+
+
+
+
 .Recipes_App {
   text-align: center;
 }
@@ -23,4 +27,6 @@
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 600;
+    position: relative;
+    bottom: 5px;
 }
