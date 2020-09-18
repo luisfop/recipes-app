@@ -4,7 +4,6 @@ export async function getRecipes(url,query){
         .then(res => res.json())
         .then(data => {
             resolve(data.hits)
-            console.log('DATA ->', data.hits)
         })
     })
 };
