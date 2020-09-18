@@ -44,7 +44,7 @@ const App = () => {
 
   return (    
       <div className="Recipes_App">
-        <h1>Recipe App</h1>
+        <h1 className="Title">Recipe App</h1>
         <div className="Form">
           <form onSubmit={submitSearch}>
             <input type="text" onChange={inputHandler} placeholder="Type the recipe that you're looking for..."/>
