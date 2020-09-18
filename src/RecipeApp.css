@@ -1,9 +1,10 @@
-
-
-
-
 .Recipes_App {
   text-align: center;
+}
+
+.Title{
+  color: lightcoral;
+  font-weight: 500;
 }
 
 .Form {
