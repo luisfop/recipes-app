@@ -5,8 +5,7 @@
     height: 420px;
     box-shadow: 9px 5px 0px 3px lightgrey;
     border-radius: 10px;
-    width: 380px;
-
+    flex: 0 1 350px;
 }
 
 

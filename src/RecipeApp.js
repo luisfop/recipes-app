@@ -14,7 +14,7 @@ const App = () => {
   const [loading, setLoading] = useState(true);
 
   const [inputData, setInputData] = useState("");
-  const [query, setQuery] = useState("Pasta");
+  const [query, setQuery] = useState("Brownie");
 
   const url = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
 

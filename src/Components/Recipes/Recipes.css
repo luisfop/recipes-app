@@ -1,26 +1,5 @@
 .Recipes {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-}
-
-
-
-@media(min-width: 355px){
-    .Recipes {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        margin-left: 10px;
-        margin-top: 10px;
-    }
-}
-
-@media(min-width: 1440px){
-    .Recipes {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        margin-left: 10px;
-        margin-top: 10px;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
