@@ -1,9 +1,7 @@
 
-# Welcome to Covid-19-Tracker!
+# Welcome to Recipes-app!
 
 
-
-[![covid-tracker.th.gif](https://s3.gifyu.com/images/covid-tracker.th.gif)](https://gifyu.com/image/5nNS)
   
 
 This App was created for study purposes. The application is a SPA ( single page application).
@@ -22,11 +20,11 @@ https://github.com/luisfop/recipes-app/
 
 On the terminal execute: 
 
-    git clone: https://github.com/luisfop/covid-19-tracker/
+    git clone: https://github.com/luisfop/recipes-app/
 
 Open the recipes-app folder:
 
-    cd covid-19-tracker/
+    cd recipes-app/
     
 Execute the command :
 
